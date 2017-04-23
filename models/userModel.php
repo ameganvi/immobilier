@@ -14,7 +14,7 @@ function seConnecter($donneesUser){
 
   $dbh = getConnexion();
 
-  $requette ="SELECT count(*) as total FROM users WHERE login=:login  AND pasword=:password";
+  $requette ="SELECT count(*) as total FROM utilisateur WHERE UTIPSEUDO=:login  AND UTIPASSWORD=:password";
   $stm = $dbh->prepare($requette);
   $stm->bindValue(':login',htmlspecialchars($donneesUser['login']), PDO::PARAM_STR);
   $stm->bindValue(':password', htmlspecialchars($donneesUser['password']), PDO::PARAM_STR);

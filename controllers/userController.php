@@ -23,8 +23,11 @@ if(isset($_POST['login']) && isset($_POST['password'])){
 function getConnected($donneesUser=''){
 
    $user = seConnecter($donneesUser);
-   if($user)
-    echo ('Yes you can');
+   if($user){
+     $lien = 'http://localhost/immohayibo/admin/index.html' ;
+    header('Location: '.$lien);
+     exit();
+   }
    else
       echo('Oups you cant');
 }
