@@ -1,8 +1,10 @@
 <?php
-include('controllers/userController.php');
 
-getConnected();
+include($_SERVER['DOCUMENT_ROOT'].'/immohayibo/controllers/userController.php');
+//getConnected();
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -366,6 +368,7 @@ getConnected();
                 </span>
             </div>
           </div>
+
       <!--
           <div class="block col-md-3">
             <h1> Aliquam quam lectusfacilisis auctor</h1>
