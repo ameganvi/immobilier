@@ -3,7 +3,7 @@
 
 function getConnexion(){
   //Paraètres de connexion
-  $dbName ="traduction";
+  $dbName ="agenceImmobiliere";
   $dbPassword ="toor";
   $dbUser="root";
 
