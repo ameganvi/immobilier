@@ -6,12 +6,31 @@ qui peut essentiellement se connecter et faire des publications et des
 modifications
 */
 
+include_once('../models/userModel.php');
 
 /* cette fonction prend en paramètres les données d'un utilisateur et le
   connecte à la plateforme
 */
-function seConnecter($donneesConnexion){
+$donneesUser = array(
+  "login" => htmlspecialchars($_POST['login']),
+  "password"=> htmlspecialchars($_POST['password'])
+);
 
+getConnected($donneesUser);
+
+function getConnected($donneesUser=''){
+  /*
+  $userInfo = array(
+      "login" => "espoir",
+      "password" => "espoir",
+  );*/
+
+   $user = seConnecter($donneesUser);
+   if($user)
+    echo ('Yes you can');
+   else
+      echo('Oups you cant');
+ //var_dump($user);
 }
 
 

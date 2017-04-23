@@ -1,3 +1,8 @@
+<?php
+include('controllers/userController.php');
+
+getConnected();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -375,22 +380,22 @@
         </div>
 
       </div>
-<!--
+
       <div class="copy-rights">
       <div class="container">
         <div class="row">
-
+<!--
             <div class="col-md-6">
               Copyright(c) website name. Designed by: <a href="http://www.alltemplateneeds.com"> www.alltemplateneeds.com</a>
             </div>
-            <div class="col-md-6">
-              Images from: <a href="http://www.wallpaperswide.com">http://wallpaperswide.com</a> / <a href="http://www.wallcoo.net"> www.wallcoo.net</a>
+          -->
+            <div class="col-md-12">
+              <a href="vues/admin.php">admin</a>
             </div>
 
           </div>
         </div>
       </div>
--->
       </div>
 
 

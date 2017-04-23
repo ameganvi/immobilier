@@ -7,23 +7,26 @@
  pour créer l'interaction avec la base de données
 */
 
-//Récupérer toutes les annonces disponibles
-function getAllAnnonces(){
+include_once('models/annonceModel.php');
 
+//Récupérer toutes les annonces disponibles
+function getAllAnnoncesData(){
+  $con = connexionBd();
+  return $con;
 }
 
 //Modifier une annonce précise
-function updateAnonnce($idAnnonce, $donneesAnnonce){
+function updateAnonnceData($idAnnonce, $donneesAnnonce){
 
 }
 
 //Supprimer une annonce
-function deleteAnnonce($annonce){
+function deleteAnnonceData($annonce){
 
 }
 
 //cette fonction prend en paramètre les données d'une annonce et l'ajoute
-function addAnnonce($donneesAnnonce){
+function addAnnonceData($donneesAnnonce){
 
 }
 ?>

@@ -5,8 +5,14 @@
  à jour les données
 */
 
+include_once('connexionBdModel.php');//Fonction contenant la connexion à la base de données
+
+
 // Fonction pour se connecter à la base de donnée
 function connexionBd(){
+
+  $bdConnexion = getConnexion();
+  return $bdConnexion ;
 
 }
 
