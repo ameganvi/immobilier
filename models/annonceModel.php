@@ -37,4 +37,9 @@ function addAnnonce($donneesAnnonce){
 }
 
 
+//cette fonction affiche les annonces
+function afficherAnnonce($donneesAnnonce){
+
+}
+
 ?>
