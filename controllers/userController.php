@@ -24,7 +24,7 @@ function getConnected($donneesUser=''){
 
    $user = seConnecter($donneesUser);
    if($user){
-     $lien = 'http://localhost/immohayibo/admin/index.html' ;
+     $lien = 'http://localhost/immobilier/admin/index.html' ;
     header('Location: '.$lien);
      exit();
    }
