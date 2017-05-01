@@ -11,8 +11,9 @@ include_once('models/annonceModel.php');
 
 //Récupérer toutes les annonces disponibles
 function getAllAnnoncesData(){
-  $con = connexionBd();
-  return $con;
+  $lesAnnonces  =  getAllAnnonces();
+
+  return $lesAnnonces;
 }
 
 //Modifier une annonce précise

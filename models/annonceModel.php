@@ -19,6 +19,40 @@ function connexionBd(){
 //Fonction pour récupérer toutes les annonces à afficher sur le site
 function getAllAnnonces(){
 
+  $dbh = getConnexion(); //Récupération de la chaine de connexion
+
+  $req = "
+          SElECT
+            	  artId				        AS idArticle,
+                artSurface			    AS surfaceArticle,
+                artAdresse			    AS adresseArticle,
+                artDescription		  AS descriptionArticle,
+                artPprix			      AS prixArticle,
+                artDateDisponible	  AS dateDisponibiliteArticle,
+                artDatePublication  AS datePublicationArticle,
+                typLibelle 	      	AS libelleArticle,
+                vilNom				      AS nomVille,
+                opeLibelle	        AS typeOperation
+
+         FROM article art
+         JOIN type_article  tpart
+              ON art.TYPID = tpart.TYPID
+         JOIN ville vil
+              ON art.VILID  = vil.VILID
+         JOIN type_operation tpop
+              ON tpop.opeId = art.OPEID
+         WHERE art.artDeleted = false
+               AND vil.vilDeleted = false
+               AND  tpart.typDeleted = FALSE
+               AND opeDeleted = FALSE;
+        " ;
+
+  $stm = $dbh->prepare($req); //Préparation de la requète
+  $stm->execute(); //Exécution de la requette
+  $reponse = $stm->fetchAll(); //Récupération du résultat
+
+  return $reponse ;
+
 }
 
 //la fonction prend en paramètre l'identifiant d'une annonce et le modifie

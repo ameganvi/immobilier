@@ -1,8 +1,11 @@
 <?php
 
 include($_SERVER['DOCUMENT_ROOT'].'/immobilier/controllers/userController.php');
+include($_SERVER['DOCUMENT_ROOT'].'/immobilier/controllers/annonceController.php');
+
 //getConnected();
 
+$lesAnnonces = getAllAnnoncesData();
 ?>
 
 <!DOCTYPE html>
@@ -127,18 +130,29 @@ include($_SERVER['DOCUMENT_ROOT'].'/immobilier/controllers/userController.php');
       <div class="featured-block">
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-md-3">
-            <div class="block">
-            <div class="thumbnail">
-              <img src="img/img1.jpg" alt="" class="img-responsive">
-              <div class="caption">
-                <h1>Lorem ipsum</h1>
-                <p>Cuibstui ipsum dolor sit amet, consectetuer adipiscing eli onec odio cuisque volutpat mattis</p>
-                <a class="btn" href="#">more</a>
-              </div>
-              </div>
+          <?php
+          foreach ($lesAnnonces as $cle => $value) {
+
+          //  $tableauAnnonces[$cle]['idArticle'] =;
+
+        echo '
+        <div class="col-md-3">
+          <div class="block">
+          <div class="thumbnail">
+            <img src="img/img1.jpg" alt="" class="img-responsive">
+            <div class="caption">
+              <h1>'. $lesAnnonces[$cle]['libelleArticle'].' '.$lesAnnonces[$cle]['typeOperation'].' </h1>
+              <p>'.$lesAnnonces[$cle]['descriptionArticle'].'</p> <p>'.$lesAnnonces[$cle]['prixArticle'].' Euros</p>
+              <a class="btn" href="#">more</a>
             </div>
             </div>
+          </div>
+          </div>
+          ';
+          }
+          ?>
+
+        <!--
             <div class="col-md-3">
               <div class="block">
                 <div class="thumbnail">
@@ -175,7 +189,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/immobilier/controllers/userController.php');
               </div>
             </div>
             </div>
-
+        -->
           </div>
 
         </div>
