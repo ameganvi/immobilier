@@ -6,7 +6,7 @@ qui peut essentiellement se connecter et faire des publications et des
 modifications
 */
 
-include_once($_SERVER['DOCUMENT_ROOT'].'/immohayibo/models/userModel.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/immobilier/models/userModel.php');
 
 /* cette fonction prend en paramètres les données d'un utilisateur et le
   connecte à la plateforme

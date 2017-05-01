@@ -1,6 +1,6 @@
 <?php
 
-include($_SERVER['DOCUMENT_ROOT'].'/immohayibo/controllers/userController.php');
+include($_SERVER['DOCUMENT_ROOT'].'/immobilier/controllers/userController.php');
 //getConnected();
 
 ?>
